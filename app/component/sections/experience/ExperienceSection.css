@@ -1,0 +1,153 @@
+/* experiences timeline */
+.experiences-section {
+    background: linear-gradient(150deg, #aaccff 0%, #e985ff 100%);
+    position: relative;
+    overflow: hidden; /* agar bubble tetap di dalam */
+    z-index: 0;
+  }
+
+  @font-face {
+    font-family: 'Mythias';
+    src: url('/fonts/Mythias.woff2') format('woff2'),
+         url('/fonts/Mythias.woff') format('woff');
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'WarungKopi';
+    src: url('/fonts/WarungKopi.woff2') format('woff2'),
+         url('/fonts/WarungKopi.woff') format('woff');
+    font-display: swap;
+  }
+  
+  
+  .experience-title {
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-family: 'Mythias', sans-serif;
+    font-size: xx-large;
+    text-shadow: 0 1px 3px rgb(255, 255, 255);
+    color: #65005bc5;
+  }
+  
+
+  .timeline-item {
+    padding: 25px;
+    margin-bottom: 25px;
+    border-left: 5px solid rgba(233, 70, 239, 0.374);
+    position: relative;
+    padding-left: 20px;
+    background-color: rgba(160, 37, 129, 0.204);
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 5px 15px rgba(34, 3, 54, 0.499);
+    transition: all 0.3s ease;
+  }
+  
+  .timeline-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 20px rgba(73, 11, 115, 0.441);
+  }
+  
+  .timeline-item:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #d946ef 0%, #ec4899 100%);
+    position: absolute;
+    left: -12px;
+    top: 25px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(217, 70, 239, 0.5);
+  }
+  
+  .timeline-period {
+    font-size: 14px;
+    color: #42003a;
+    font-weight: 600;
+  }
+  
+  .timeline-emoji {
+    font-size: 2rem;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .timeline-item:hover .timeline-emoji {
+    transform: rotate(15deg) scale(1.2);
+  }
+
+  .timeline-item.education {
+    border-left-color: #a78bfa; /* Lilac atau ungu muda */
+  }
+  .timeline-item.experience {
+    border-left-color: #f472b6; /* Pink */
+  }  
+
+  /* Timeline Title Custom Color */
+  .timeline-title {
+    text-shadow: 0 1px 3px rgb(255, 255, 255);
+    color: #65005bc5;
+  }
+
+  .timeline-sub-title {
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.81);
+    color: #2e2a2a;
+  }
+  
+
+  /* Dark Mode Title */
+  body[data-bs-theme="dark"] .section-title {
+    color: #f9a8d4; /* Pink color in dark mode */
+  }
+
+  body[data-bs-theme="dark"] .timeline-title {
+    text-shadow: 0 1px 3px rgba(59, 38, 60, 0.444);
+    color: #ffb4f4; /* pink terang agar tetap kontras di dark bg */
+  }
+
+  body[data-bs-theme="dark"] .timeline-sub-title {
+    text-shadow: 0 1px 3px rgba(59, 38, 60, 0.444);
+    color: #ffffff; /* pink terang agar tetap kontras di dark bg */
+  }
+  
+  body[data-bs-theme="dark"] .timeline-period {
+    text-shadow: 0 1px 3px rgba(59, 38, 60, 0.444);
+    color: #ffb4f4; /* pink terang agar tetap kontras di dark bg */
+  }
+  /* === Experiences Section: Dark Mode === */
+  body[data-bs-theme="dark"] .experiences-section {
+    background: linear-gradient(135deg,  #1b2d56 0%, #8b2f748e 100%);
+    color: #ff8bf7;
+  }
+
+  /* === Timeline Item in Dark Mode === */
+  body[data-bs-theme="dark"] .timeline-item {
+    background-color: rgba(255, 203, 227, 0.158);
+    border-left: 5px solid #f472f2f0;
+    box-shadow: 0 4px 20px rgba(255, 152, 241, 0.358);
+  }
+
+  body[data-bs-theme="dark"] .timeline-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 6px 25px rgba(255, 105, 180, 0.2);
+  }
+
+  /* === Dot & Emoji in Dark Mode === */
+  body[data-bs-theme="dark"] .timeline-item:before {
+    background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+    box-shadow: 0 0 10px rgba(255, 120, 200, 0.5);
+  }
+
+  body[data-bs-theme="dark"] .timeline-emoji {
+    text-shadow: 0 2px 6px rgba(235, 157, 255, 0.422);
+  }
+
+  body[data-bs-theme="dark"] .experience-title {
+    text-shadow: 0 2px 6px rgba(235, 157, 255, 0.422);
+  }
+
+
+ 
+  

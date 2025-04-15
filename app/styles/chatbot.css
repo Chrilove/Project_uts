@@ -1,0 +1,266 @@
+/* /styles/chatbot.css */
+.chatbot-container {
+  position: relative;
+}
+
+.chatbot-toggle {
+  background: #7f5af0;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  z-index: 10000;
+  cursor: grab; /* Menandakan tombol chatbot bisa digeser */
+  position: fixed; 
+  bottom: 20px;
+  right: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.chatbot-toggle:hover {
+  background-color: #4c3cfa;
+}
+
+.chatbot-box {
+  background: hsl(295, 100%, 88%)fff;
+  width: 100%;
+  max-width: 360px;
+  height: 450px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: grab;
+  animation: slideUp 0.5s ease-out;
+  }
+  
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.chatbot-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.message {
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  max-width: 80%;
+  word-wrap: break-word;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-family: 'Arial', sans-serif;
+}
+
+.message.user {
+  background: linear-gradient(135deg, #7f5af0, #a855f7);
+  color: white;
+  align-self: flex-end;
+  border-top-left-radius: 20px;
+}
+
+.message.bot {
+  background: #f0f0f0;
+  color: #333;
+  align-self: flex-start;
+  border-top-right-radius: 20px;
+}
+
+.chatbot-input {
+  display: flex;
+  padding: 12px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chatbot-input input {
+  flex: 1;
+  border: 2px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.chatbot-input input:focus {
+  border-color: #7f5af0;
+}
+
+.chatbot-input button {
+  border: none;
+  background: #7f5af0;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chatbot-input button:hover {
+  background-color: #4c3cfa;
+  transform: scale(1.1);
+}
+
+.chatbot-close {
+  background: #ff8fce;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.chatbot-close:hover {
+  background-color: #ff58ca;
+}
+
+.chatbot-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb:hover {
+  background-color: #7f5af0;
+}
+
+/* Mode terang (Light mode) */
+.chatbot-box {
+  background: #ff82f7; /* Warna latar belakang terang */
+  color: #333;
+}
+
+/* Mode terang (Light mode) */
+html.light .chatbot-box {
+  background: #ff80f4; /* Ganti dengan warna lebih lembut atau krem */
+  color: #333;
+}
+
+html.light .chatbot-messages {
+  background: #ff9dfa; /* Warna background pesan lebih lembut */
+}
+
+html.light .chatbot-input input {
+  background: #c736d7; /* Warna input lebih bersih tapi tidak terlalu kontras */
+  border: 1px solid #ddd;
+}
+
+html.light .chatbot-toggle {
+  background: #7f5af0; /* Tombol tetap berwarna cerah */
+}
+
+/* Mode terang (Light mode) */
+html.light .chatbot-box {
+  background: linear-gradient(135deg, #ee00ff, #e0e0e0); /* Menambahkan gradien lembut */
+  color: #333;
+}
+
+/* Mode gelap (Dark mode) */
+html[data-theme='dark'] .chatbot-box {
+  background: #333; /* Warna latar belakang gelap */
+  color: #ffbcf6;
+}
+
+html[data-theme='dark'] .message.user {
+  background: #7f5af0; /* Warna gradien untuk user saat dark mode */
+}
+
+html[data-theme='dark'] .message.bot {
+  background: #444; /* Warna latar belakang pesan bot saat dark mode */
+  color: #ccc;
+}
+
+html[data-theme='dark'] .chatbot-input input {
+  background: #555; /* Background input di mode gelap */
+  color: white; /* Warna teks di input */
+  border: 1px solid #444; /* Warna border input */
+}
+
+html[data-theme='dark'] .chatbot-input button {
+  background: #7f5af0; /* Warna tombol kirim di mode gelap */
+}
+
+html[data-theme='dark'] .chatbot-toggle {
+  background: #7f5af0; /* Warna tombol toggle di mode gelap */
+}
+
+html[data-theme='dark'] .chatbot-close {
+  background: #ff58ca; /* Warna tombol close di mode gelap */
+}
+
+/* Custom scrollbar untuk mode gelap */
+html[data-theme='dark'] .chatbot-messages::-webkit-scrollbar-thumb {
+  background-color: #555;
+}
+
+html[data-theme='dark'] .chatbot-messages::-webkit-scrollbar-thumb:hover {
+  background-color: #7f5af0;
+}
+
+/* /styles/chatbot.css */
+
+/* Mode terang (Light mode) */
+html[data-bs-theme='light'] .chatbot-box {
+  background: #f9f9f9; /* Latar belakang chatbot terang */
+  color: #333;
+}
+
+/* Mode gelap (Dark mode) */
+html[data-bs-theme='dark'] .chatbot-box {
+  background: #333; /* Latar belakang chatbot gelap */
+  color: #fff;
+}
+
+/* Mode terang (Light mode) */
+html[data-bs-theme='light'] .chatbot-toggle {
+  background: #7f5af0; /* Warna tombol toggle di mode terang */
+}
+
+/* Mode gelap (Dark mode) */
+html[data-bs-theme='dark'] .chatbot-toggle {
+  background: #7f5af0; /* Warna tombol toggle di mode gelap */
+}
+
+
+@font-face {
+  font-family: 'WarungKopi';
+  src: url('/fonts/WarungKopi.woff2') format('woff2'),
+       url('/fonts/WarungKopi.woff') format('woff');
+  font-display: swap;
+}
+
+
+.chatbot-title {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: 'Warung Kopi';
+}

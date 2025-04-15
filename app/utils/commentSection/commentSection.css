@@ -1,0 +1,113 @@
+/* ================= BASE STYLE UNTUK SEMUA MODE ================= */
+.chat-message-left,
+.chat-message-right {
+  text-align: left;
+  background: none;
+  border: none;
+  outline: none;
+  text-shadow: none;
+  color: inherit;
+}
+
+.comment-bubble {
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+  border: none !important;
+  box-shadow: none !important;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Warung Kopi', sans-serif;
+  font-weight: 500;
+}
+
+/* ================= STAR ================= */
+.star {
+  font-size: 2rem;
+  color: #ff89f1;
+  transition: transform 0.2s;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.star:hover {
+  transform: scale(1.2);
+  color: #ff84e0;
+}
+
+/* ================= TITLE SECTION ================= */
+.rating-title {
+  letter-spacing: 1px;
+  font-family: 'Mythias', sans-serif;
+  font-size: x-large;
+  text-shadow:  rgb(243, 253, 255);
+  color: #5a004e;
+}
+
+.rating-sub-title {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: 'Mythias', sans-serif;
+  font-size: x-large;
+  color: #520051;
+  text-shadow: 0 1px 3px #f1f1f1;
+}
+
+.rating-subtitle {
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Warung Kopi', sans-serif;
+  text-align: left;
+  color: #000000;
+  text-shadow: #f1f1f1;
+}
+
+.comment-form {
+  background: linear-gradient(135deg, #ffa7e375, #e05efd69);
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.555);
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+}
+
+/* ================= DARK MODE ================= */
+body.dark-mode .comment-bubble {
+  background-color: #bbf9ff50;
+  color: #f1f1f1;
+}
+
+body.dark-mode .chat-message-right .comment-bubble.admin {
+  background-color: #2e6a47 !important;
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+body[data-bs-theme="dark"] .rating-subtitle {
+  color: #621367; 
+}
+
+body[data-bs-theme="dark"] .rating-sub-title {
+  text-shadow: #2d0031;
+  color: #a4fffc; 
+}
+
+body[data-bs-theme="dark"] .rating-title {
+  text-shadow: #2d0031;
+  color: #ffffff; 
+}
+
+body.dark-mode .star {
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .star:hover {
+  color: #ffcffd;
+}
+
+body[data-bs-theme="dark"] .contact-form {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(251, 77, 228, 0.2);
+  backdrop-filter: blur(4px);
+  color: white;
+  box-shadow: none;
+}

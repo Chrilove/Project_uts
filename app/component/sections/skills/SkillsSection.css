@@ -1,0 +1,106 @@
+.skills-section {
+    background: linear-gradient(150deg, #ffb8e3 0%, #aaccff 100%);
+    position: relative;
+    overflow: hidden; /* agar bubble tetap di dalam */
+    z-index: 0;
+    color: #333;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  @font-face {
+    font-family: 'Mythias';
+    src: url('/fonts/Mythias.woff2') format('woff2'),
+         url('/fonts/Mythias.woff') format('woff');
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'WarungKopi';
+    src: url('/fonts/WarungKopi.woff2') format('woff2'),
+         url('/fonts/WarungKopi.woff') format('woff');
+    font-display: swap;
+  }
+
+.skills-title {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: 'Mythias', sans-serif;
+  font-size: xx-large;
+  text-shadow: 0 1px 3px rgb(243, 253, 255);
+  color: #019a8b;
+}
+
+.skills-sub-title {
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: 'Mythias', sans-serif;
+  text-align: left;
+  text-shadow: 0 1px 3px rgb(255, 255, 255);
+  color: #430040fb;
+}
+
+.skills-subtitle {
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Warung Kopi', sans-serif;
+  text-align: left;
+  color: #000000;
+  text-shadow: #f1f1f1;
+}
+
+/* === Skills Section: Dark Mode === */
+body[data-bs-theme="dark"] .skills-section {
+  background: linear-gradient(135deg, #700072 0%, #1b2d56 100%);
+  color: #ffffff;
+}
+
+/* === Adjust Text Elements in Dark Mode === */
+body[data-bs-theme="dark"] .skills-section .section-title,
+body[data-bs-theme="dark"] .skills-section .hero-sub-title,
+body[data-bs-theme="dark"] .skills-section p {
+  color: #f3e8ff;
+}
+
+/* === Adjust Button in Dark Mode === */
+body[data-bs-theme="dark"] .skills-section .btn-candy {
+  background: linear-gradient(90deg, #f472b6, #fda4af);
+  color: white;
+}
+
+body[data-bs-theme="dark"] .skills-section .btn-candy:hover {
+  background: linear-gradient(90deg, #ec4899, #fb7185);
+  color: white;
+}
+
+/* === Progress Bar Dark Mode === */
+body[data-bs-theme="dark"] .progress {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body[data-bs-theme="dark"] .progress-bar {
+  background: linear-gradient(90deg, #f472b6 0%, #fda4af 100%);
+}
+
+body[data-bs-theme="dark"] .progress-bar::after {
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  box-shadow: 0 0 10px rgba(255, 100, 200, 0.5);
+}
+
+body[data-bs-theme="dark"] .skills-section .section-title,
+body[data-bs-theme="dark"] .skills-section {
+text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+} 
+
+body[data-bs-theme="dark"] .skills-title {
+  text-shadow: #2d0031;
+  color: #f8c2ff; 
+}
+
+body[data-bs-theme="dark"] .skills-sub-title {
+  text-shadow: #2d0031;
+  color: #a4fffc; 
+}
+
+body[data-bs-theme="dark"] .skills-subtitle {
+  color: #621367; 
+}

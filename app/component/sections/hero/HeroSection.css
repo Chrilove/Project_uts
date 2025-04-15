@@ -1,0 +1,211 @@
+/* Hero special styles */
+.hero-section {
+  background-image: url('/bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  transition: filter 0.3s ease;
+}           
+
+@supports (background-image: url('image.webp')) {
+  .hero-section {
+    background-image: url('/images/bg.webp'); /* dipakai kalau browser dukung WebP */
+  }
+}
+  
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: inherit; /* bisa juga pakai warna/image tersendiri */
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.hero-overlay {
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0); /* light mode */
+  transition: background-color 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+@font-face {
+  font-family: 'Mythias';
+  src: url('/fonts/Mythias.woff2') format('woff2'),
+       url('/fonts/Mythias.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WarungKopi';
+  src: url('/fonts/WarungKopi.woff2') format('woff2'),
+       url('/fonts/WarungKopi.woff') format('woff');
+  font-display: swap;
+}
+
+
+.hero-title {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: 'Mythias', sans-serif;
+  text-shadow: 0 1px 3px rgb(255, 255, 255);
+  color: #65005bc5;
+}
+
+.hero-sub-title {
+  font-family: 'Warung Kopi';
+  color: #ffffffc5;
+}
+
+.hero-subtitle {
+  color: #ffffff;
+  text-shadow:
+    0 2px 4px rgba(46, 0, 42, 0.6),  
+}
+
+
+body[data-bs-theme="dark"] .hero-section {
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #0000007c;
+  color: #f3e8ff;
+  text-align: center;
+}
+
+body[data-bs-theme="dark"] .hero-overlay {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.268); 
+  transition: background-color 0.5s ease;
+}
+
+body[data-bs-theme="dark"] .hero-title {
+  color: #ffffff;
+}
+
+body[data-bs-theme="dark"] .hero-sub-title {
+  color: #65005bc5;
+}
+
+body[data-bs-theme="dark"] .btn-candy {
+  background: linear-gradient(90deg, #9333ea 0%, #d946ef 100%);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(194, 120, 243, 0.3);
+}
+
+.btn-candy {
+  background: linear-gradient(90deg, #f87dc6 0%, #f9c2ff 100%);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(248, 125, 198, 0.3);
+}
+
+.btn-candy:hover {
+  transform: translateY(-3px) rotate(-2deg);
+  box-shadow: 0 8px 20px rgba(248, 125, 198, 0.4);
+  background: linear-gradient(90deg, #f76bb9 0%, #f8b0ff 100%);
+  color: white;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2; /* Pastikan di atas overlay */
+}
+
+
+  /* Animation classes */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  .animate-on-scroll.animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Animation variations */
+  .fade-in-right {
+    transform: translateX(-50px) scale(0.9);
+  }
+  
+  .fade-in-right.animate {
+    transform: translateX(0) scale(1);
+  }
+  
+  .fade-in-left {
+    transform: translateX(50px) scale(0.9);
+  }
+  
+  .fade-in-left.animate {
+    transform: translateX(0) scale(1);
+  }
+  
+  .fade-in-up {
+    transform: translateY(50px) scale(0.9);
+  }
+  
+  .fade-in-up.animate {
+    transform: translateY(0) scale(1);
+  }
+  
+  .wiggle {
+    animation: none;
+  }
+  
+  .wiggle.animate {
+    animation: wiggle 2s ease-in-out infinite;
+  }
+  
+  @keyframes wiggle {
+    0%, 100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+  
+  .pulse {
+    animation: none;
+  }
+  
+  .pulse.animate {
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }

@@ -1,0 +1,29 @@
+/* Styling tombol pengubah tema */
+.theme-toggle-btn {
+    background-color: #7f5af0; /* Warna latar belakang tombol */
+    border: none; /* Menghilangkan border */
+    border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+    width: 50px; /* Sesuaikan dengan ukuran tombol chatbot */
+    height: 50px; /* Sesuaikan dengan ukuran tombol chatbot */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Ukuran emoji sedikit lebih kecil agar pas */
+    color: white; /* Warna emoji dan teks */
+    cursor: pointer; /* Menambahkan pointer saat hover */
+    position: fixed; /* Menempel di posisi tetap */
+    bottom: 100px; /* Jarak dari bawah */
+    right: 1.5rem; /* Jarak dari kanan */
+    z-index: 9999; /* Menempatkan tombol di atas elemen lain */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan untuk tombol */
+    transition: all 0.3s ease; /* Animasi smooth saat tombol di-hover */
+  }
+  
+  /* Efek hover */
+  .theme-toggle-btn:hover {
+    background-color: #ce3cfa; /* Mengubah warna saat hover */
+    transform: scale(1.1); /* Efek zoom saat hover */
+  }
+  
+  
+  
