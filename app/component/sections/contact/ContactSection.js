@@ -72,13 +72,13 @@ export default function ContactSection() {
         <div className="contact-form animate-on-scroll">
           <h3 className="mb-4 contact-section-title">Contact Me <span className="fs-3">✨</span></h3>
           <form onSubmit={handleContactSubmit}>
-            <div className="mb-3 contact-sub-title">
+            <div className="mb-3 contact-subtitle">
               <input name="name" type="text" className="form-control" placeholder="Your Name" required />
             </div>
-            <div className="mb-3 contact-sub-title">
+            <div className="mb-3 contact-subtitle">
               <input name="email" type="email" className="form-control" placeholder="Your Email" required />
             </div>
-            <div className="mb-3 contact-sub-title">
+            <div className="mb-3 contact-subtitle">
               <textarea
                 name="message"
                 className="form-control"
